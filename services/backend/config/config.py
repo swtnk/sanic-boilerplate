@@ -7,7 +7,7 @@ BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
 env = environ.Env(DEBUG=(bool, False))
 
-environ.Env.read_env(env_file=BASE_DIR / ".env")
+environ.Env.read_env(env_file=f"""{BASE_DIR / ".env"}""")
 
 
 @dataclass(frozen=True)

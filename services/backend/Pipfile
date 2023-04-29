@@ -11,8 +11,8 @@ asyncpg = "*"
 sqlalchemy = "*"
 aiomysql = "*"
 aiosqlite = "*"
+ipython = "*"
 ipdb = "*"
-ipython = "==8.12"
 python-environ = "*"
 
 [dev-packages]
@@ -20,5 +20,5 @@ black = "*"
 flake8 = "*"
 
 [requires]
-python_version = "3.8"
-python_full_version = "3.8.16"
+python_version = "3.11"
+python_full_version = "3.11.3"
