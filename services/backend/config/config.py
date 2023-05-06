@@ -12,6 +12,7 @@ environ.Env.read_env(env_file=f"""{BASE_DIR / ".env"}""")
 
 @dataclass(frozen=True)
 class Config:
+    APP_NAME: str = "quTer"
     BASE_DIR: Path = BASE_DIR
     APP_DIR: Path = BASE_DIR / "apps"
     EXCLUDE_DIRNAME: typing.Tuple[str] = ("__pycache__",)

@@ -11,6 +11,7 @@ for path in Path(config.APP_DIR).iterdir():
         module = __import__(f"apps.{path.name}.routes")
         if hasattr(module, path.name):
             app = getattr(module, path.name)
-            blueprint_list.add(app.routes.blueprint)
+            if hasattr(app.routes, "blueprint"):
+                blueprint_list.add(app.routes.blueprint)
 
 blueprint = Blueprint.group(*blueprint_list, version_prefix="/api/v")
